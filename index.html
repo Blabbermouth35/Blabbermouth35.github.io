@@ -5,6 +5,12 @@
 <style>
 td:hover {background-color: #D6EEEE;}
 </style>
+<style>
+		.form-container {
+			margin: 0 auto;
+			width: 50%;
+		}
+	</style>
 <link rel="icon" href="favicon.png" type="image/png">
 <title>Landing Page</title>
 </head>
@@ -31,7 +37,15 @@ td:hover {background-color: #D6EEEE;}
 </table>
 <hr>
 <footer>
-    <p id="contact me">You can mail to me by clicking <a href="mailto:poyrazmen35@gmail.com" title="My gmail address!" target="_blank">here</a> or by filing the form below</p>
+    <p id="contact me" style="text-align:center;">You can mail to me by clicking <a href="mailto:poyrazmen35@gmail.com" title="My gmail address!" target="_blank">here</a> or by filing the form below</p>
+    <form action="mailto:poyrazmen35@gmail.com">
+        <label>Mail Address:</label><br>
+        <input type="text" name="in_mail" value="example@example"><br>
+        <label for="lname">Subject of mail:</label><br>
+        <input type="text" name="subject" value="please write your mesage here"><br>
+        <input type="submit" value="Submit">
+
+    </form>
 </footer>
 </body> 
 </html>
