@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p {
+            font-size: 30px;
+            margin-top: 10px;
+            text-align: center;
+            padding: 5px;
+        }
+    </style>
+    <title>Countdowns!</title>
+</head>
 
+<body style="background-color:#ffd080">
+<h2 style="text-align:left;">Danish Youth Nature Adventure & Culture Camp</h2>
+<p id="days"></p>
+<p id="hours"></p>
+<p id="minutes"></p>
+<p id="seconds"></p>
+<script>
+    function main(){
+        let now = new Date().getTime();
+        let time_remaining = end_date - now;
+        let days = Math.floor(time_remaining / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((time_remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((time_remaining % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((time_remaining % (1000 * 60)) / 1000);
+        document.getElementById("days").innerHTML = days + "days ";
+        document.getElementById("hours").innerHTML = hours + "hours ";
+        document.getElementById("minutes").innerHTML = minutes + "minutes ";
+        document.getElementById("seconds").innerHTML = seconds + "seconds ";
+    }
+
+    let end_date = new Date("July 29, 2024 00:00:01").getTime();
+    setInterval(main, 1000);
+</script>
+</body>
+</html>
