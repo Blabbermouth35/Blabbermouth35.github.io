@@ -16,10 +16,12 @@
 
 <body style="background-color:#ffd080">
 <h2 style="text-align:left;">Danish Youth Nature Adventure & Culture Camp</h2>
-<p id="days"></p>
-<p id="hours"></p>
-<p id="minutes"></p>
-<p id="seconds"></p>
+<div style="display: flex; justify-content: space-between;">
+    <p id="days"></p>
+    <p id="hours"></p>
+    <p id="minutes"></p>
+    <p id="seconds"></p>
+</div>
 <script>
     function main(){
         let now = new Date().getTime();
